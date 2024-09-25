@@ -17,48 +17,16 @@ fn main() {
             Err(_) => continue,
         };
         if opr == 1 {
-            let mut a = String::new();
-            let mut b = String::new();
-            println!("Please enter first num.");
-            io::stdin().read_line(&mut a).expect("Failed to read line");
-            println!("Please enter second num.");
-            io::stdin().read_line(&mut b).expect("Failed to read line");
-            let a: i32 = match a.trim().parse(){Ok(num)=>num, Err(_) => continue,};
-            let b: i32 = match b.trim().parse(){Ok(num)=>num, Err(_) => continue,};
-            println!("Result: {}", add(a, b));
+            add();
         }
         else if opr == 2 {
-            let mut a = String::new();
-            let mut b = String::new();
-            println!("Please enter first num.");
-            io::stdin().read_line(&mut a).expect("Failed to read line");
-            println!("Please enter second num.");
-            io::stdin().read_line(&mut b).expect("Failed to read line");
-            let a: i32 = match a.trim().parse(){Ok(num)=>num, Err(_) => continue,};
-            let b: i32 = match b.trim().parse(){Ok(num)=>num, Err(_) => continue,};
-            println!("Result: {}", sub(a, b));
+            sub();
         }
         else if opr == 3 {
-            let mut a = String::new();
-            let mut b = String::new();
-            println!("Please enter first num.");
-            io::stdin().read_line(&mut a).expect("Failed to read line");
-            println!("Please enter second num.");
-            io::stdin().read_line(&mut b).expect("Failed to read line");
-            let a: f32 = match a.trim().parse(){Ok(num)=>num, Err(_) => continue,};
-            let b: f32 = match b.trim().parse(){Ok(num)=>num, Err(_) => continue,};
-            println!("Result: {}", divide(a, b));
+            divide();
         }
         else if opr == 4 {
-            let mut a = String::new();
-            let mut b = String::new();
-            println!("Please enter first num.");
-            io::stdin().read_line(&mut a).expect("Failed to read line");
-            println!("Please enter second num.");
-            io::stdin().read_line(&mut b).expect("Failed to read line");
-            let a: i32 = match a.trim().parse(){Ok(num)=>num, Err(_) => continue,};
-            let b: i32 = match b.trim().parse(){Ok(num)=>num, Err(_) => continue,};
-            println!("Result: {}", multiply(a, b));
+            multiply();
         }
         else {
             break;
@@ -66,18 +34,62 @@ fn main() {
     }
 }
 
-fn add(a: i32, b: i32) -> i32{
-    a + b
+fn add(){
+    loop{
+        let mut a = String::new();
+        let mut b = String::new();
+        println!("Please enter first num.");
+        io::stdin().read_line(&mut a).expect("Failed to read line");
+        println!("Please enter second num.");
+        io::stdin().read_line(&mut b).expect("Failed to read line");
+        let a: i32 = match a.trim().parse(){Ok(num)=>num, Err(_) => continue,};
+        let b: i32 = match b.trim().parse(){Ok(num)=>num, Err(_) => continue,};
+        println!("Result: {}", a + b);
+        break;
+    }
 }
 
-fn sub(a: i32, b: i32) -> i32{
-    a - b
+fn sub(){
+    loop{
+        let mut a = String::new();
+        let mut b = String::new();
+        println!("Please enter first num.");
+        io::stdin().read_line(&mut a).expect("Failed to read line");
+        println!("Please enter second num.");
+        io::stdin().read_line(&mut b).expect("Failed to read line");
+        let a: i32 = match a.trim().parse(){Ok(num)=>num, Err(_) => continue,};
+        let b: i32 = match b.trim().parse(){Ok(num)=>num, Err(_) => continue,};
+        println!("Result: {}", a - b);
+        break;
+    }
 }
 
-fn divide(a: f32, b: f32) -> f32{
-    a / b
+fn divide(){
+    loop{
+        let mut a = String::new();
+        let mut b = String::new();
+        println!("Please enter first num.");
+        io::stdin().read_line(&mut a).expect("Failed to read line");
+        println!("Please enter second num.");
+        io::stdin().read_line(&mut b).expect("Failed to read line");
+        let a: f32 = match a.trim().parse(){Ok(num)=>num, Err(_) => continue,};
+        let b: f32 = match b.trim().parse(){Ok(num)=>num, Err(_) => continue,};
+        println!("Result: {}", a / b);
+        break;
+    }
 }
 
-fn multiply(a: i32, b:i32) -> i32{
-    a * b
+fn multiply(){
+    loop{
+        let mut a = String::new();
+        let mut b = String::new();
+        println!("Please enter first num.");
+        io::stdin().read_line(&mut a).expect("Failed to read line");
+        println!("Please enter second num.");
+        io::stdin().read_line(&mut b).expect("Failed to read line");
+        let a: i32 = match a.trim().parse(){Ok(num)=>num, Err(_) => continue,};
+        let b: i32 = match b.trim().parse(){Ok(num)=>num, Err(_) => continue,};
+        println!("Result: {}", a * b);
+        break;
+    }
 }
